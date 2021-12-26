@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <script src="https://kit.fontawesome.com/5099e2e891.js" crossorigin="anonymous"></script>
+
+  <style>
+   /*
+    .cardEff{
+      border-radius: 4px;
+      background: #fff;
+      box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+      cursor: pointer;
+  }
+  
+  .cardEff:hover{
+    transform: scale(1.05);
+  } */
+
+  .image  {
+    max-width: 100%;
+    max-height: 100%;
+    -webkit-transition: .4s all;
+}
+
+.image:hover {
+    -webkit-filter: brightness(75%);
+}
+    
+  </style>
+
+</head>
+<body>
+
+    {% include 'partials/_navbar.html' %}
+  <div> 
+    
+
+    {% block content %}
+
+
+    {% endblock %}   
+
+  </div>  
+
+    {% include 'partials/_footer.html' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    
+
+    <script>
+      $(function(){
+        $(".C").hover(function(){
+          $(this).css("color","green");
+        }, function(){
+          $(this).css("color","rgba(0, 0, 0, 0.788)");
+        });
+      });
+    </script>
+
+    <script>
+      $(function(){
+        $("#title1,#title2").hover(function(){
+          $(this).css("color","orange").css("text-decoration","underline").css("text-decoration-color","#DCDCDC");
+        }, function(){
+          $(this).css("color","white").css("text-decoration","none").css("text-decoration-color","none");
+        });
+      });
+    </script>
+
+    <script>
+      $(function(){
+        $("#title3,#title4").hover(function(){
+          $(this).css("color","red").css("text-decoration","underline").css("text-decoration-color","#DCDCDC");
+        }, function(){
+          $(this).css("color","black").css("text-decoration","none").css("text-decoration-color","none");
+        });
+      });
+    </script>
+    
+</body>
+</html>

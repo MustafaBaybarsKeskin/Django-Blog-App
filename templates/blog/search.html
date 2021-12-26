@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container mt-5" style="margin-bottom: 25%;">
+
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-10 mx-auto">
+    <div class="m"><h3>Arama Sonuçları</h3></div> 
+    <div ><hr/></div>
+</div>
+    
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-9 col-md-9 col-sm-9 col-10 mx-auto">
+            
+            {% if searchblog %} 
+                {% for blogsPost3 in searchblog %}
+                    <div class="card col-10 mx-auto" style="width: 75%;">
+                    <img src="{{ blogsPost3.image.url}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="title3" class="card-title"><a style="text-decoration: none; color:Black; font-weight:border;" href="{% url 'blogDetail' blogsPost3.id %}" title="">{{ blogsPost3.title }}</a></h5>
+                            <p class="card-text">{{ blogsPost3.summary }}</p>
+                            <p class="card-text">{{ blogsPost3.created_date }}</p>
+                            <p class="card-text">{{ blogsPost3.author }}</p>
+                        </div>
+                    </div>
+                    <br>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
